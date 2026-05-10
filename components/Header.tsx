@@ -39,9 +39,9 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Logo centré */}
-        <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center leading-none group">
-          <span className="font-serif text-[30px] font-black tracking-wide text-black">
+        {/* Logo centré — pointer-events-none pour ne pas bloquer le hamburger */}
+        <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center leading-none group z-0">
+          <span className="font-serif text-[22px] sm:text-[30px] font-black tracking-wide text-black">
             Le Bon Bois
           </span>
           <span className="text-[8px] tracking-[0.35em] uppercase text-mist font-medium mt-0.5">
@@ -67,15 +67,15 @@ export default function Header() {
           </a>
         </nav>
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger — z-10 pour être au-dessus du logo, 44×44px zone de tap */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden flex flex-col justify-center gap-[5px] w-8 h-8 ml-auto"
+          className="lg:hidden relative z-10 flex flex-col justify-center items-center gap-[5px] w-11 h-11 ml-auto -mr-2 touch-manipulation"
           aria-label="Menu"
         >
-          <span className={`block h-px bg-ink transition-all duration-200 ${mobileOpen ? 'w-5 rotate-45 translate-y-[6px]' : 'w-5'}`} />
-          <span className={`block h-px bg-ink transition-all duration-200 ${mobileOpen ? 'opacity-0 w-5' : 'w-4'}`} />
-          <span className={`block h-px bg-ink transition-all duration-200 ${mobileOpen ? 'w-5 -rotate-45 -translate-y-[6px]' : 'w-5'}`} />
+          <span className={`block h-[1.5px] bg-ink transition-all duration-200 origin-center ${mobileOpen ? 'w-5 rotate-45 translate-y-[6.5px]' : 'w-5'}`} />
+          <span className={`block h-[1.5px] bg-ink transition-all duration-200 ${mobileOpen ? 'opacity-0 w-5' : 'w-4'}`} />
+          <span className={`block h-[1.5px] bg-ink transition-all duration-200 origin-center ${mobileOpen ? 'w-5 -rotate-45 -translate-y-[6.5px]' : 'w-5'}`} />
         </button>
       </div>
 
