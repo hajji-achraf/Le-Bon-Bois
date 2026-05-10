@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     'Découvrez nos meubles artisanaux en bois naturel — bureaux, tables, étagères et meubles de rangement fabriqués à la main au Maroc.',
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${playfair.variable} ${inter.variable}`}>

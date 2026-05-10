@@ -27,7 +27,7 @@ function CatalogueContent() {
   }, [activeCategory, sortBy, search]);
 
   return (
-    <div className="min-h-screen bg-white pt-[105px]">
+    <div className="min-h-screen bg-white pt-[93px]">
 
       {/* Titre page */}
       <div className="border-b border-border py-14 px-8 md:px-16">

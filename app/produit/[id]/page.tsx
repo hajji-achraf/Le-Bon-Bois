@@ -20,7 +20,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   );
 
   return (
-    <div className="min-h-screen bg-white pt-[105px]">
+    <div className="min-h-screen bg-white pt-[93px]">
 
       {/* Fil d'ariane */}
       <div className="border-b border-border px-8 md:px-16 py-3">
